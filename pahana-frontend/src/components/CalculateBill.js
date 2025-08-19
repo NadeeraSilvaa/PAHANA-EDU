@@ -6,7 +6,7 @@ function CalculateBill() {
   const [total, setTotal] = useState(null);
 
   const doCalc = async () => {
-    const res = await fetch('http://localhost:8080/calculateBill', {
+    const res = await fetch('http://localhost:8081/pahana-backend/calculateBill', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ customerId: custId, units })

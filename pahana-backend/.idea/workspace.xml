@@ -5,41 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CalculateBillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/EditCustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ManageItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtos/BillDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtos/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtos/ItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factory/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/CustomerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/ItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/BillService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/test/TestDBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/HelpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/SimpleCorsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validators/CustomerValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validators/ItemValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/DeleteCustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ViewBillsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CalculateBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CalculateBillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EditCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EditCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ManageItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ManageItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SimpleCorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SimpleCorsFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +46,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -103,9 +100,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -183,7 +180,7 @@
       <workItem from="1755133136629" duration="422000" />
       <workItem from="1755133606091" duration="5209000" />
       <workItem from="1755592645709" duration="521000" />
-      <workItem from="1755593189144" duration="354000" />
+      <workItem from="1755593189144" duration="9777000" />
     </task>
     <servers />
   </component>

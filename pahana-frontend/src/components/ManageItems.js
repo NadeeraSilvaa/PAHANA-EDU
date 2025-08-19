@@ -13,7 +13,7 @@ function ManageItems() {
       params.append('name', name);
       params.append('price', price);
     }
-    const res = await fetch('http://localhost:8080/manageItem', {
+    const res = await fetch('http://localhost:8081/pahana-backend/manageItem', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: params

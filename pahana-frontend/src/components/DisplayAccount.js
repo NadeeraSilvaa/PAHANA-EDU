@@ -5,7 +5,7 @@ function DisplayAccount() {
   const [details, setDetails] = useState(null);
 
   const doDisplay = async () => {
-    const res = await fetch(`http://localhost:8080/displayAccount?accountNumber=${accNum}`);
+    const res = await fetch(`http://localhost:8081/pahana-backend/displayAccount?accountNumber=${accNum}`);
     const data = await res.json();
     setDetails(data);
   };

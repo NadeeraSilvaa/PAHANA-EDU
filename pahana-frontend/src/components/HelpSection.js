@@ -4,7 +4,7 @@ function HelpSection() {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8080/help')
+    fetch('http://localhost:8081/pahana-backend/help')
       .then(res => res.json())
       .then(data => setText(data.help));
   }, []);

@@ -11,17 +11,35 @@ function AddCustomer() {
       alert('Fill all');
       return;
     }
-    const res = await fetch('http://localhost:8080/addCustomer', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ name, address: addr, phone, units })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      alert('Added');
-      setName(''); setAddr(''); setPhone(''); setUnits('');
-    } else {
-      alert('Error');
+
+    try {
+      const res = await fetch('http://localhost:8081/pahana-backend/addCustomer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ name, address: addr, phone, units })
+      });
+
+      if (!res.ok) {
+        // e.g. 500, 404
+        const text = await res.text();
+        throw new Error(`HTTP ${res.status} - ${text}`);
+      }
+
+      const data = await res.json();
+
+      if (data.ok) {
+        alert('Added');
+        setName('');
+        setAddr('');
+        setPhone('');
+        setUnits('');
+      } else {
+        console.error('Backend error:', data);
+        alert(`Error: ${data.message || 'Unknown error'}`);
+      }
+    } catch (err) {
+      console.error('Request failed:', err);
+      alert(`Failed to add customer: ${err.message}`);
     }
   };
 

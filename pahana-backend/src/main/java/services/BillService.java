@@ -1,19 +1,23 @@
 package services;
 
 import dao.BillDao;
-import factory.DaoFactory;
 import models.Bill;
 import java.sql.SQLException;
+import java.util.List;
 
 public class BillService {
-    private BillDao dao = DaoFactory.getBDao();
+    private BillDao dao = new BillDao();
 
     public double calc(int units) {
-        double price = 10.0;  // Simple
-        return units * price;
+        // Existing logic (e.g., $0.10 per unit)
+        return units * 0.10;
     }
 
     public boolean save(Bill b) throws SQLException {
         return dao.saveB(b);
+    }
+
+    public List<Bill> getBillsByCustomer(int customerId) throws SQLException {
+        return dao.getBillsByCustomer(customerId);
     }
 }

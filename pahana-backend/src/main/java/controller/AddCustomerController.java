@@ -4,10 +4,10 @@ import models.Customer;
 import org.json.JSONObject;
 import services.CustomerService;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -34,9 +34,16 @@ public class AddCustomerController extends HttpServlet {
         try {
             boolean ok = service.add(cust);
             json.put("ok", ok);
+            if (!ok) {
+                json.put("message", "Failed to add customer (maybe duplicate or DB error).");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
+            json.put("ok", false);
+            json.put("message", e.getMessage()); // send SQL error back
         }
+
         out.print(json);
     }
+
 }

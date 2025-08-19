@@ -5,33 +5,97 @@ import ManageItems from './ManageItems';
 import DisplayAccount from './DisplayAccount';
 import CalculateBill from './CalculateBill';
 import HelpSection from './HelpSection';
+import ViewBills from './ViewBills'; // New component
+import DeleteCustomer from './DeleteCustomer'; // New component
+import SearchItems from './SearchItems'; // New component
 
-function Dashboard({ setIsLogged }) {
+function Dashboard({ setLoggedIn }) {
   const [part, setPart] = useState('addCust');
 
   const doLogout = () => {
-    setIsLogged(false);
+     setLoggedIn(true); 
   };
 
   return (
-    <div className="dash">
-      <h1>Pahana Edu App</h1>
-      <nav className="side">
-        <button onClick={() => setPart('addCust')}>Add Cust</button>
-        <button onClick={() => setPart('editCust')}>Edit Cust</button>
-        <button onClick={() => setPart('manageIt')}>Manage It</button>
-        <button onClick={() => setPart('displayAcc')}>Show Details</button>
-        <button onClick={() => setPart('calcB')}>Calc Bill</button>
-        <button onClick={() => setPart('helpS')}>Help</button>
-        <button onClick={doLogout}>Out</button>
+    <div className="flex h-screen bg-gray-100">
+      {/* Sidebar */}
+      <nav className="w-64 bg-blue-800 text-white p-4 space-y-4">
+        <h2 className="text-xl font-bold mb-4">Pahana Edu App</h2>
+        <button
+          onClick={() => setPart('addCust')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Add Customer
+        </button>
+        <button
+          onClick={() => setPart('editCust')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Edit Customer
+        </button>
+        <button
+          onClick={() => setPart('manageIt')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Manage Items
+        </button>
+        <button
+          onClick={() => setPart('displayAcc')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Show Details
+        </button>
+        <button
+          onClick={() => setPart('calcB')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Calculate Bill
+        </button>
+        <button
+          onClick={() => setPart('viewBills')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          View Bills
+        </button>
+        <button
+          onClick={() => setPart('deleteCust')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Delete Customer
+        </button>
+        <button
+          onClick={() => setPart('searchIt')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Search Items
+        </button>
+        <button
+          onClick={() => setPart('helpS')}
+          className="w-full text-left p-2 hover:bg-blue-700 rounded transition duration-200"
+        >
+          Help
+        </button>
+        <button
+          onClick={doLogout}
+          className="w-full text-left p-2 bg-red-600 hover:bg-red-500 rounded transition duration-200 mt-4"
+        >
+          Logout
+        </button>
       </nav>
-      <div className="cont">
-        {part === 'addCust' && <AddCustomer />}
-        {part === 'editCust' && <EditCustomer />}
-        {part === 'manageIt' && <ManageItems />}
-        {part === 'displayAcc' && <DisplayAccount />}
-        {part === 'calcB' && <CalculateBill />}
-        {part === 'helpS' && <HelpSection />}
+
+      {/* Content Area */}
+      <div className="flex-1 p-6 overflow-y-auto">
+        <div className="max-w-4xl mx-auto">
+          {part === 'addCust' && <AddCustomer />}
+          {part === 'editCust' && <EditCustomer />}
+          {part === 'manageIt' && <ManageItems />}
+          {part === 'displayAcc' && <DisplayAccount />}
+          {part === 'calcB' && <CalculateBill />}
+          {part === 'viewBills' && <ViewBills />}
+          {part === 'deleteCust' && <DeleteCustomer />}
+          {part === 'searchIt' && <SearchItems />}
+          {part === 'helpS' && <HelpSection />}
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function EditCustomer() {
       alert('Fill all');
       return;
     }
-    const res = await fetch('http://localhost:8080/editCustomer', {
+    const res = await fetch('http://localhost:8081/pahana-backend/editCustomer', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ accountNumber: accNum, name, address: addr, phone, units })

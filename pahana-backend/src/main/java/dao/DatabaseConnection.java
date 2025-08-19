@@ -13,10 +13,9 @@ public class DatabaseConnection {
                 // Load MySQL driver (optional in recent Java versions)
                 Class.forName("com.mysql.cj.jdbc.Driver");
 
-                // Localhost connection
                 String url = "jdbc:mysql://localhost:3306/pahanaedu?useSSL=false&allowPublicKeyRetrieval=true";
-                String username = "root";       // default XAMPP MySQL user
-                String password = "123456"; // whatever you set in XAMPP
+                String username = "root";
+                String password = "123456";
 
                 conn = DriverManager.getConnection(url, username, password);
                 System.out.println("✅ Connected to local MySQL");
@@ -27,7 +26,34 @@ public class DatabaseConnection {
                 System.out.println("❌ Database connection failed.");
                 e.printStackTrace();
             }
+        } else {
+            try {
+                if (conn.isClosed()) {
+                    conn = null; // Reset connection if closed
+                    System.out.println("⚠️ Previous connection was closed. Reconnecting...");
+                    return getConn(); // Recursively get a new connection
+                }
+            } catch (SQLException e) {
+                System.out.println("❌ Error checking connection status. Reconnecting...");
+                e.printStackTrace();
+                conn = null; // Reset on error
+                return getConn(); // Try to reconnect
+            }
         }
         return conn;
+    }
+
+    public static void closeConn() {
+        if (conn != null) {
+            try {
+                conn.close();
+                System.out.println("✅ Database connection closed.");
+            } catch (SQLException e) {
+                System.out.println("❌ Failed to close database connection.");
+                e.printStackTrace();
+            } finally {
+                conn = null; // Ensure conn is reset after closing
+            }
+        }
     }
 }
