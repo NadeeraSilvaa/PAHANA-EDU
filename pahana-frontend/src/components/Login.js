@@ -5,7 +5,7 @@ function Login({ setIsLogged }) {
   const [uPass, setUPass] = useState('');
 
   const doLogin = async () => {
-    const res = await fetch('http://localhost:8080/login', {
+    const res = await fetch('http://localhost:8081/pahana-backend/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ username: uName, password: uPass })
