@@ -20,14 +20,14 @@ public class EditCustomerController extends HttpServlet {
         String name = req.getParameter("name");
         String addr = req.getParameter("address");
         String phone = req.getParameter("phone");
-        int units = Integer.parseInt(req.getParameter("units"));
+
 
         Customer cust = new Customer();
         cust.setAccountNumber(accNum);
         cust.setName(name);
         cust.setAddress(addr);
         cust.setPhone(phone);
-        cust.setUnitsConsumed(units);
+
 
         resp.setContentType("application/json");
         PrintWriter out = resp.getWriter();

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FaUserPlus, FaEdit, FaBoxOpen, FaEye, FaCalculator,
   FaFileInvoice, FaTrash, FaQuestionCircle,
@@ -18,14 +18,27 @@ import { useTheme } from '../ThemeContext';
 function Dashboard({ setLoggedIn, setError, userRole }) {
   const { darkMode, setDarkMode } = useTheme();
   const [part, setPart] = useState('addCust');
+  const [role, setRole] = useState(userRole);
+
+
+  useEffect(() => {
+    if (userRole) {
+      localStorage.setItem('userRole', userRole);
+      setRole(userRole);
+    } else {
+      const storedRole = localStorage.getItem('userRole');
+      if (storedRole) setRole(storedRole);
+    }
+  }, [userRole]);
 
   const doLogout = () => {
     localStorage.removeItem('authToken');
+    localStorage.removeItem('userRole');
     setLoggedIn(false);
     setError('');
   };
 
-  // Define menu items based on role
+
   const menuItems = {
     Cashier: [
       { key: 'addCust', label: 'Add Customer', icon: <FaUserPlus /> },
@@ -49,11 +62,11 @@ function Dashboard({ setLoggedIn, setError, userRole }) {
     ],
   };
 
-  const visibleMenuItems = userRole ? menuItems[userRole] || menuItems['Cashier'] : [];
+  const visibleMenuItems = role ? menuItems[role] || menuItems['Cashier'] : [];
 
   return (
     <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-900'}`}>
-      {/* Sidebar */}
+    
       <nav className={`w-64 p-6 space-y-6 shadow-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-r-2xl`}>
         <h2 className="text-2xl font-bold mb-8 flex items-center text-gradient-to-r from-blue-400 to-purple-500">
           <FaBookOpen className="mr-2" /> Pahana Edu
@@ -89,16 +102,22 @@ function Dashboard({ setLoggedIn, setError, userRole }) {
         </div>
       </nav>
 
-      {/* Main Content */}
       <main className="flex-1 p-8 overflow-y-auto">
+        
+        <div className="flex justify-end mb-4">
+          <span className="px-4 py-2 rounded-lg shadow bg-gradient-to-r from-purple-500 to-blue-400 text-white font-semibold">
+            Role: {role}
+          </span>
+        </div>
+
         <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg transition">
           {part === 'addCust' && <AddCustomer />}
           {part === 'editCust' && <EditCustomer />}
-          {part === 'manageIt' && userRole === 'Admin' && <ManageItems />}
+          {part === 'manageIt' && role === 'Admin' && <ManageItems />}
           {part === 'displayAcc' && <DisplayAccount />}
           {part === 'calcB' && <CalculateBill />}
           {part === 'viewBills' && <ViewBills />}
-          {part === 'deleteCust' && userRole === 'Admin' && <DeleteCustomer />}
+          {part === 'deleteCust' && role === 'Admin' && <DeleteCustomer />}
           {part === 'browseBooks' && <BrowseBooks />}
           {part === 'helpS' && <HelpSection />}
         </div>

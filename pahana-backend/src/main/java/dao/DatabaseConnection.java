@@ -10,10 +10,10 @@ public class DatabaseConnection {
     private static final String USER = "root";
     private static final String PASS = "123456";
 
-    // ✅ Always return a new connection
+
     public static Connection getConn() throws SQLException {
         try {
-            // Optional in modern JDBC, but safe
+
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             throw new SQLException("MySQL Driver not found", e);

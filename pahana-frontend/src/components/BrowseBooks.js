@@ -118,13 +118,13 @@ function BrowseBooks() {
               className={`p-4 border rounded-lg shadow hover:shadow-lg transition ${darkMode ? 'border-borderDark bg-backgroundDark' : 'border-borderLight bg-white'}`}
             >
               {book.imageUrl ? (
-                <img src={book.imageUrl} alt={book.name} className="w-full h-48 object-cover rounded-md mb-4" />
+                <img src={`http://localhost:8081/pahana-backend/${book.imageUrl}`} alt={book.name} className="w-full h-48 object-cover rounded-md mb-4" />
               ) : (
                 <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded-md mb-4 flex items-center justify-center text-textSecondaryLight dark:text-textSecondaryDark">No Image</div>
               )}
               <h4 className="text-lg font-bold">{book.name}</h4>
               <p className="text-textSecondaryLight dark:text-textSecondaryDark">{book.author ? `by ${book.author}` : 'No author available'}</p>
-              <p className="text-primary font-semibold mt-2">${book.price}</p>
+              <p className="text-primary font-semibold mt-2">LKR {book.price}</p>
               <p className="text-sm text-accent">{book.category || 'General'}</p>
             </div>
           ))

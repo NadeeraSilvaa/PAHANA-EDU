@@ -35,16 +35,6 @@ public class CustomerDao {
         }
     }
 
-    // Update Units Consumed
-    public boolean updateUnits(int accountNumber, int additionalUnits) throws SQLException {
-        String sql = "UPDATE customers SET units = units + ? WHERE account_number = ?";
-        try (Connection conn = DatabaseConnection.getConn();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, additionalUnits);
-            stmt.setInt(2, accountNumber);
-            return stmt.executeUpdate() > 0;
-        }
-    }
 
     // Get Customer by Account Number
     public Customer getCust(int accNum) throws SQLException {

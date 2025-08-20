@@ -75,7 +75,7 @@ function ViewBills() {
       <ul className="space-y-4">
         {bills.map((bill) => (
           <li key={bill.id} className="p-4 border rounded-md border-borderLight dark:border-borderDark">
-            Bill ID: {bill.id} - Amount: ${bill.billAmount}
+            Bill ID: {bill.id} - Amount: LKR {bill.billAmount}
           </li>
         ))}
       </ul>

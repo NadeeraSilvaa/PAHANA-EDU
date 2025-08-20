@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BillDao {
 
-    // ✅ Save Bill
+    //  Save Bill
     public boolean saveB(Bill b) throws SQLException {
         String sql = "INSERT INTO bills (customer_id, bill_amount, bill_date) VALUES (?, ?, NOW())";
         try (Connection conn = DatabaseConnection.getConn();
@@ -23,7 +23,7 @@ public class BillDao {
         }
     }
 
-    // ✅ Get Bills by Customer
+    //  Get Bills by Customer
     public List<Bill> getBillsByCustomer(int customerId) throws SQLException {
         List<Bill> bills = new ArrayList<>();
         String sql = "SELECT * FROM bills WHERE customer_id = ?";

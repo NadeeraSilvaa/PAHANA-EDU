@@ -12,9 +12,9 @@ function CalculateBill() {
   const [loading, setLoading] = useState(true);
   const [userRole, setUserRole] = useState('');
 
-  // Fetch user role from token on mount
+ 
   useEffect(() => {
-    const token = localStorage.getItem('authToken'); // Assume token is stored here after login
+    const token = localStorage.getItem('authToken'); 
     if (token) {
       fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
         .then(res => res.json())
@@ -36,7 +36,7 @@ function CalculateBill() {
     }
   }, []);
 
-  // Fetch all books on mount
+
   useEffect(() => {
     fetch('http://localhost:8081/pahana-backend/getAllBooks')
       .then(res => res.json())
@@ -51,7 +51,7 @@ function CalculateBill() {
       });
   }, []);
 
-  // Fetch customer name when customerId changes
+
   useEffect(() => {
     if (customerId) {
       fetch(`http://localhost:8081/pahana-backend/getCustomer?accountNumber=${customerId}`)
@@ -169,7 +169,7 @@ function CalculateBill() {
               >
                 <option value="">Select a book</option>
                 {books.map(book => (
-                  <option key={book.id} value={String(book.id)}>{book.name} - ${book.price?.toFixed(2)}</option>
+                  <option key={book.id} value={String(book.id)}>{book.name} - LKR {book.price?.toFixed(2)}</option>
                 ))}
               </select>
               <input
@@ -234,9 +234,9 @@ function CalculateBill() {
                 return (
                   <tr key={index} className={`border-b ${darkMode ? 'border-borderDark' : 'border-borderLight'}`}>
                     <td className="p-2">{selectedBook.name}</td>
-                    <td className="text-right p-2">${selectedBook.price?.toFixed(2) || 'N/A'}</td>
+                    <td className="text-right p-2">LKR {selectedBook.price?.toFixed(2) || 'N/A'}</td>
                     <td className="text-right p-2">{book.quantity}</td>
-                    <td className="text-right p-2">${((selectedBook.price || 0) * book.quantity).toFixed(2)}</td>
+                    <td className="text-right p-2">LKR {((selectedBook.price || 0) * book.quantity).toFixed(2)}</td>
                   </tr>
                 );
               })}
@@ -244,7 +244,7 @@ function CalculateBill() {
             <tfoot>
               <tr>
                 <td colSpan="3" className="p-2 font-bold text-right">Total Amount:</td>
-                <td className="p-2 font-bold text-right">${total.toFixed(2)}</td>
+                <td className="p-2 font-bold text-right">LKR {total.toFixed(2)}</td>
               </tr>
             </tfoot>
           </table>

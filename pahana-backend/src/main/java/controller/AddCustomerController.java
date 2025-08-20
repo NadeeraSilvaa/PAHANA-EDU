@@ -41,7 +41,7 @@ public class AddCustomerController extends HttpServlet {
             boolean ok = service.add(cust);
             json.put("ok", ok);
             if (!ok) {
-                json.put("message", "Failed to add customer (maybe duplicate or DB error).");
+                json.put("message", "Failed to add customer.");
             }
         } catch (SQLException e) {
             e.printStackTrace();

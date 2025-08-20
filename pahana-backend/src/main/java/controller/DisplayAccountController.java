@@ -24,7 +24,6 @@ public class DisplayAccountController extends HttpServlet {
 
         try {
             if ("all".equals(action)) {
-                // Fetch all customers
                 JSONArray jsonArray = new JSONArray();
                 for (Customer cust : service.getAll()) {
                     JSONObject json = new JSONObject();
