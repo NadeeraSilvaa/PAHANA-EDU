@@ -2,6 +2,7 @@ package services;
 
 import dao.UserDao;
 import factory.DaoFactory;
+import models.User;
 import java.sql.SQLException;
 
 public class UserService {
@@ -9,5 +10,9 @@ public class UserService {
 
     public boolean logIn(String uName, String uPass) throws SQLException {
         return dao.getU(uName, uPass) != null;
+    }
+
+    public User getUser(String uName, String uPass) throws SQLException {
+        return dao.getU(uName, uPass);
     }
 }

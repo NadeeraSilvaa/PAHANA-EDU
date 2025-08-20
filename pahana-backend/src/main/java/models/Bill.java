@@ -1,17 +1,8 @@
 package models;
 import java.sql.Timestamp;
 public class Bill {
-    private int billId;
     private int customerId;
     private double billAmount;
-
-    public int getBillId() {
-        return billId;
-    }
-
-    public void setBillId(int billId) {
-        this.billId = billId;
-    }
 
     public int getCustomerId() {
         return customerId;
@@ -30,13 +21,11 @@ public class Bill {
     }
     private int id;
 
-
     private Timestamp createdAt;
 
     // Getters and setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-
 
     public Timestamp getCreatedAt() { return createdAt; }
     public void setCreatedAt(Timestamp createdAt) { this.createdAt = createdAt; }

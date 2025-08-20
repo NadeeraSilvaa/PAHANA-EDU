@@ -25,6 +25,10 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/verify</url-pattern>
+  </servlet-mapping>
 
   <!-- Servlet for Add Customer -->
   <servlet>
@@ -86,7 +90,7 @@
     <url-pattern>/manageItem</url-pattern>
   </servlet-mapping>
 
-  <!-- Servlet for Manage Item -->
+  <!-- Servlet for View Bills -->
   <servlet>
     <servlet-name>ViewBillsController</servlet-name>
     <servlet-class>controller.ViewBillsController</servlet-class>
@@ -95,4 +99,47 @@
     <servlet-name>ViewBillsController</servlet-name>
     <url-pattern>/viewBills</url-pattern>
   </servlet-mapping>
+
+  <!--  Servlet for delete customer-->
+  <servlet>
+    <servlet-name>DeleteCustomerController</servlet-name>
+    <servlet-class>controller.DeleteCustomerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCustomerController</servlet-name>
+    <url-pattern>/deleteCustomer</url-pattern>
+  </servlet-mapping>
+
+  <!--  Servlet for search items-->
+
+  <servlet>
+    <servlet-name>SearchItemsController</servlet-name>
+    <servlet-class>controller.SearchItemsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchItemsController</servlet-name>
+    <url-pattern>/searchItems</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetAllItemsController</servlet-name>
+    <servlet-class>controller.GetAllItemsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllItemsController</servlet-name>
+    <url-pattern>/getAllBooks</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>GetCustomerController</servlet-name>
+    <servlet-class>controller.GetCustomerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetCustomerController</servlet-name>
+    <url-pattern>/getCustomer</url-pattern>
+  </servlet-mapping>
+
+
+
+
 </web-app>

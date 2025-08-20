@@ -19,13 +19,11 @@ public class AddCustomerController extends HttpServlet {
         String name = req.getParameter("name");
         String addr = req.getParameter("address");
         String phone = req.getParameter("phone");
-        int units = Integer.parseInt(req.getParameter("units"));
 
         Customer cust = new Customer();
         cust.setName(name);
         cust.setAddress(addr);
         cust.setPhone(phone);
-        cust.setUnitsConsumed(units);
 
         resp.setContentType("application/json");
         PrintWriter out = resp.getWriter();
@@ -40,10 +38,9 @@ public class AddCustomerController extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
             json.put("ok", false);
-            json.put("message", e.getMessage()); // send SQL error back
+            json.put("message", e.getMessage());
         }
 
         out.print(json);
     }
-
 }
