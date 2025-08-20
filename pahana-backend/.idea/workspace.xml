@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/AddCustomerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/DeleteCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/DeleteCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" afterDir="false" />
-    </list>
+    <list default="true" id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\htmlReport" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Dev" />
+        <entry key="$PROJECT_DIR$/.." value="Staging" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -77,40 +61,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TestDBConnection.executor": "Run",
-    "JUnit.AddCustomerControllerTest (1).executor": "Coverage",
-    "JUnit.AddCustomerControllerTest.executor": "Coverage",
-    "JUnit.LoginControllerTest.executor": "Coverage",
-    "JUnit.LoginControllerTest.testDoPostLoginFailure.executor": "Coverage",
-    "JUnit.LoginControllerTest.testDoPostLoginSuccess.executor": "Coverage",
-    "JUnit.LoginControllerTest.testDoPostVerifySuccess.executor": "Run",
-    "JUnit.LoginControllerTest.testVerifyToken.executor": "Coverage",
-    "JUnit.TestDBConnectionTest.executor": "Coverage",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Dev.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/nadee/OneDrive/Desktop/ICBT/Java Project/PAHANA-EDU/pahana-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TestDBConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddCustomerControllerTest (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AddCustomerControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostLoginFailure.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostLoginSuccess.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostVerifySuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginControllerTest.testVerifyToken.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.TestDBConnectionTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Dev.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nadee/OneDrive/Desktop/ICBT/Java Project/PAHANA-EDU/pahana-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="test" />
@@ -296,7 +280,7 @@
     <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testDoPostLoginFailure.ic" NAME="LoginControllerTest.testDoPostLoginFailure Coverage Results" MODIFIED="1755710869870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest.ic" NAME="AddCustomerControllerTest Coverage Results" MODIFIED="1755712187166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest.ic" NAME="AddCustomerControllerTest Coverage Results" MODIFIED="1755714220967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>controller.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest__1_.ic" NAME="AddCustomerControllerTest (1) Coverage Results" MODIFIED="1755711898487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
