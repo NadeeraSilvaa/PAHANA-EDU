@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
 
 function EditCustomer() {
@@ -9,15 +9,45 @@ function EditCustomer() {
   const [phone, setPhone] = useState('');
   const [error, setError] = useState('');
   const [customerFetched, setCustomerFetched] = useState(false);
+  const [userRole, setUserRole] = useState('');
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
+  }, []);
 
   const fetchCustomer = async () => {
+    if (!userRole || !['Admin', 'Cashier'].includes(userRole)) {
+      setError('Access denied: Insufficient permissions');
+      return;
+    }
     if (!accNum) {
       setError('Please enter an account number');
       return;
     }
     setError('');
     try {
-      const res = await fetch(`http://localhost:8081/pahana-backend/getCustomer?accountNumber=${accNum}`);
+      const res = await fetch(`http://localhost:8081/pahana-backend/getCustomer?accountNumber=${accNum}`, {
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+      });
       const data = await res.json();
       if (data.ok) {
         setName(data.customer.name);
@@ -35,6 +65,10 @@ function EditCustomer() {
   };
 
   const doEdit = async () => {
+    if (!userRole || !['Admin', 'Cashier'].includes(userRole)) {
+      setError('Access denied: Insufficient permissions');
+      return;
+    }
     if (!accNum || !name || !addr || !phone) {
       setError('Please fill all fields');
       return;
@@ -44,7 +78,10 @@ function EditCustomer() {
     try {
       const res = await fetch('http://localhost:8081/pahana-backend/editCustomer', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+        },
         body: new URLSearchParams({ accountNumber: accNum, name, address: addr, phone })
       });
       const data = await res.json();
@@ -62,6 +99,8 @@ function EditCustomer() {
       setError('Failed to update customer');
     }
   };
+
+  if (!userRole) return <p className="text-error text-center">Loading role...</p>;
 
   return (
     <div className={`p-6 rounded-lg shadow-md ${darkMode ? 'bg-cardDark text-textDark' : 'bg-cardLight text-textLight'}`}>

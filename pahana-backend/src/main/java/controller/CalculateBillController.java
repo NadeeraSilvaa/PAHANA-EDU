@@ -19,9 +19,9 @@ import java.sql.SQLException;
 import java.util.stream.Collectors;
 
 public class CalculateBillController extends HttpServlet {
-    private ItemService itemService = new ItemService();
-    private BillService billService = new BillService();
-    private CustomerService customerService = new CustomerService();
+    ItemService itemService = new ItemService();
+    BillService billService = new BillService();
+    CustomerService customerService = new CustomerService();
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");

@@ -1,4 +1,3 @@
-// src/components/DisplayAccount.js
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
 
@@ -8,24 +7,52 @@ function DisplayAccount() {
   const [customers, setCustomers] = useState([]);
   const [filteredCustomers, setFilteredCustomers] = useState([]);
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('');
 
   useEffect(() => {
-    const fetchAllCustomers = async () => {
-      try {
-        const res = await fetch('http://localhost:8081/pahana-backend/displayAccount?action=all');
-        if (!res.ok) {
-          const data = await res.json();
-          throw new Error(data.error || 'Failed to fetch customers');
-        }
-        const data = await res.json();
-        setCustomers(data);
-        setFilteredCustomers(data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    fetchAllCustomers();
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
   }, []);
+
+  useEffect(() => {
+    if (userRole) {
+      const fetchAllCustomers = async () => {
+        try {
+          const res = await fetch('http://localhost:8081/pahana-backend/displayAccount?action=all', {
+            headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+          });
+          if (!res.ok) {
+            const data = await res.json();
+            throw new Error(data.error || 'Failed to fetch customers');
+          }
+          const data = await res.json();
+          setCustomers(data);
+          setFilteredCustomers(data);
+        } catch (err) {
+          setError(err.message);
+        }
+      };
+      fetchAllCustomers();
+    }
+  }, [userRole]);
 
   useEffect(() => {
     const filtered = customers.filter(customer =>
@@ -36,10 +63,15 @@ function DisplayAccount() {
   }, [searchTerm, customers]);
 
   const handleDelete = async (accountNumber) => {
+    if (userRole !== 'Admin') {
+      setError('Access denied: Admin role required to delete');
+      return;
+    }
     if (window.confirm('Are you sure you want to delete this customer?')) {
       try {
         const res = await fetch(`http://localhost:8081/pahana-backend/displayAccount?accountNumber=${accountNumber}`, {
           method: 'DELETE',
+          headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
         });
         const data = await res.json();
         if (data.ok) {
@@ -53,6 +85,9 @@ function DisplayAccount() {
       }
     }
   };
+
+  if (!userRole) return <p className="text-error text-center">Loading role...</p>;
+  if (!['Admin', 'Cashier'].includes(userRole)) return <p className="text-error text-center">Access denied</p>;
 
   return (
     <div className={`p-6 rounded-lg shadow-md ${darkMode ? 'bg-cardDark text-textDark' : 'bg-cardLight text-textLight'}`}>
@@ -77,12 +112,14 @@ function DisplayAccount() {
               <p className="text-textSecondaryLight dark:text-secondaryDark">Address: {customer.address}</p>
               <p className="text-textSecondaryLight dark:text-textSecondaryDark">Phone: {customer.phone}</p>
               <p className="text-textSecondaryLight dark:text-textSecondaryDark">Books Purchased: {customer.units}</p>
-              <button
-                onClick={() => handleDelete(customer.accountNumber)}
-                className="mt-2 py-2 px-4 bg-error text-white rounded-md hover:opacity-90 transition"
-              >
-                Delete
-              </button>
+              {userRole === 'Admin' && (
+                <button
+                  onClick={() => handleDelete(customer.accountNumber)}
+                  className="mt-2 py-2 px-4 bg-error text-white rounded-md hover:opacity-90 transition"
+                >
+                  Delete
+                </button>
+              )}
             </div>
           ))
         ) : (

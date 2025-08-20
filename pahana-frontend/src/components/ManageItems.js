@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
 
 function ManageItems() {
@@ -11,8 +11,36 @@ function ManageItems() {
   const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('');
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
+  }, []);
 
   const doManage = async () => {
+    if (userRole !== 'Admin') {
+      setError('Access denied: Admin role required');
+      return;
+    }
     if (act !== 'delete' && (!name || !price || !author || !category)) {
       setError('Please fill name, price, author, and category');
       return;
@@ -38,11 +66,11 @@ function ManageItems() {
       const res = await fetch('http://localhost:8081/pahana-backend/manageItem', {
         method: 'POST',
         body: formData,
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
       });
       const data = await res.json();
       if (data.ok) {
         alert(`${act.charAt(0).toUpperCase() + act.slice(1)} successful`);
-        // Reset form after successful operation
         setId('');
         setName('');
         setPrice('');
@@ -64,7 +92,7 @@ function ManageItems() {
         setError('Please select an image file');
         return;
       }
-      if (file.size > 5 * 1024 * 1024) { // 5MB limit
+      if (file.size > 5 * 1024 * 1024) {
         setError('Image size must be less than 5MB');
         return;
       }
@@ -72,6 +100,9 @@ function ManageItems() {
       setError('');
     }
   };
+
+  if (!userRole) return <p className="text-error text-center">Loading role...</p>;
+  if (userRole !== 'Admin') return <p className="text-error text-center">Access denied: Admin role required</p>;
 
   return (
     <div className={`p-6 rounded-lg shadow-md ${darkMode ? 'bg-cardDark text-textDark' : 'bg-cardLight text-textLight'}`}>

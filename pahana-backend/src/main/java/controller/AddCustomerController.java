@@ -11,11 +11,23 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.Map;
 
 public class AddCustomerController extends HttpServlet {
-    private CustomerService service = new CustomerService();
+    protected CustomerService service = new CustomerService();
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String tokenHeader = req.getHeader("Authorization");
+        String token = (tokenHeader != null && tokenHeader.startsWith("Bearer ")) ? tokenHeader.substring(7) : null;
+        if (!isAuthorized(token, "Admin")) {
+            resp.sendError(HttpServletResponse.SC_FORBIDDEN, "Access denied: Admin role required");
+            return;
+        }
+
+        resp.setContentType("application/json");
+        PrintWriter out = resp.getWriter();
+        JSONObject json = new JSONObject();
+
         String name = req.getParameter("name");
         String addr = req.getParameter("address");
         String phone = req.getParameter("phone");
@@ -24,10 +36,6 @@ public class AddCustomerController extends HttpServlet {
         cust.setName(name);
         cust.setAddress(addr);
         cust.setPhone(phone);
-
-        resp.setContentType("application/json");
-        PrintWriter out = resp.getWriter();
-        JSONObject json = new JSONObject();
 
         try {
             boolean ok = service.add(cust);
@@ -42,5 +50,11 @@ public class AddCustomerController extends HttpServlet {
         }
 
         out.print(json);
+    }
+
+    private boolean isAuthorized(String token, String requiredRole) {
+        if (token == null) return false;
+        Map<String, String> userData = LoginController.tokenStore.get(token);
+        return userData != null && userData.get("role") != null && userData.get("role").equals(requiredRole);
     }
 }

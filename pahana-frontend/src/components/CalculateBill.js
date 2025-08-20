@@ -6,17 +6,42 @@ function CalculateBill() {
   const [customerId, setCustomerId] = useState('');
   const [customerName, setCustomerName] = useState('');
   const [books, setBooks] = useState([]);
-  const [selectedBooks, setSelectedBooks] = useState([]); // Array of {id, quantity}
+  const [selectedBooks, setSelectedBooks] = useState([]);
   const [total, setTotal] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  const [userRole, setUserRole] = useState('');
+
+  // Fetch user role from token on mount
+  useEffect(() => {
+    const token = localStorage.getItem('authToken'); // Assume token is stored here after login
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
+  }, []);
 
   // Fetch all books on mount
   useEffect(() => {
     fetch('http://localhost:8081/pahana-backend/getAllBooks')
       .then(res => res.json())
       .then(data => {
-        console.log('Fetched books:', data); // Debug log
+        console.log('Fetched books:', data);
         setBooks(Array.isArray(data) ? data : []);
         setLoading(false);
       })
@@ -54,7 +79,7 @@ function CalculateBill() {
 
   const updateBookSelection = (index, field, value) => {
     const updatedBooks = [...selectedBooks];
-    updatedBooks[index][field] = field === 'id' ? String(value) : value; // Ensure id is string
+    updatedBooks[index][field] = field === 'id' ? String(value) : value;
     setSelectedBooks(updatedBooks);
   };
 
@@ -63,6 +88,14 @@ function CalculateBill() {
   };
 
   const doCalc = async () => {
+    if (!userRole) {
+      setError('Please log in to calculate bills');
+      return;
+    }
+    if (!['Admin', 'Cashier'].includes(userRole)) {
+      setError('Access denied: Insufficient permissions');
+      return;
+    }
     if (!customerId || selectedBooks.length === 0 || selectedBooks.some(book => !book.id || !book.quantity)) {
       setError('Please fill customer ID and all book selections');
       return;
@@ -70,19 +103,19 @@ function CalculateBill() {
     setError('');
 
     const bookData = selectedBooks.map(book => ({
-      bookId: String(book.id), // Ensure bookId is string
+      bookId: String(book.id),
       quantity: parseInt(book.quantity)
     }));
-    console.log('Sending book data:', bookData); // Debug log
+    console.log('Sending book data:', bookData);
 
     try {
       const res = await fetch('http://localhost:8081/pahana-backend/calculateBill', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('authToken')}` },
         body: JSON.stringify({ customerId, books: bookData })
       });
       const data = await res.json();
-      console.log('Backend response:', data); // Debug log
+      console.log('Backend response:', data);
       if (data.ok) {
         setTotal(data.total);
       } else {
@@ -99,30 +132,19 @@ function CalculateBill() {
 
   if (loading) return <p className="text-center text-textLight dark:text-textDark">Loading books...</p>;
   if (error && !books.length) return <p className="text-error text-center">{error}</p>;
+  if (!userRole) return <p className="text-error text-center">Please log in to access this page</p>;
 
-  const currentDate = new Date().toLocaleDateString();
+  const currentDate = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
 
   return (
     <div className={`p-6 rounded-lg shadow-md ${darkMode ? 'bg-cardDark text-textDark' : 'bg-cardLight text-textLight'}`}>
       <style>
         {`
           @media print {
-            body * {
-              visibility: hidden;
-            }
-            .receipt, .receipt * {
-              visibility: visible;
-            }
-            .receipt {
-              position: absolute;
-              left: 0;
-              top: 0;
-              width: 100%;
-              padding: 20px;
-            }
-            .no-print {
-              display: none;
-            }
+            body * { visibility: hidden; }
+            .receipt, .receipt * { visibility: visible; }
+            .receipt { position: absolute; left: 0; top: 0; width: 100%; padding: 20px; }
+            .no-print { display: none; }
           }
         `}
       </style>

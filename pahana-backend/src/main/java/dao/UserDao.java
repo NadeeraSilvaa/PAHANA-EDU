@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class UserDao {
 
-    // ✅ Get User by username + password
+    // Get User by username + password
     public User getU(String uName, String uPass) throws SQLException {
         String sql = "SELECT * FROM users WHERE username=? AND password=?";
 
@@ -24,6 +24,7 @@ public class UserDao {
                     u.setUserId(rs.getInt("id"));
                     u.setUserName(rs.getString("username"));
                     u.setUserPass(rs.getString("password"));
+                    u.setRole(rs.getString("role"));
                     return u;
                 }
             }

@@ -1,4 +1,3 @@
-// src/components/Dashboard.js
 import React, { useState } from 'react';
 import {
   FaUserPlus, FaEdit, FaBoxOpen, FaEye, FaCalculator,
@@ -16,7 +15,7 @@ import DeleteCustomer from './DeleteCustomer';
 import BrowseBooks from './BrowseBooks';
 import { useTheme } from '../ThemeContext';
 
-function Dashboard({ setLoggedIn, setError }) {
+function Dashboard({ setLoggedIn, setError, userRole }) {
   const { darkMode, setDarkMode } = useTheme();
   const [part, setPart] = useState('addCust');
 
@@ -26,21 +25,34 @@ function Dashboard({ setLoggedIn, setError }) {
     setError('');
   };
 
-  const menuItems = [
-    { key: 'addCust', label: 'Add Customer', icon: <FaUserPlus /> },
-    { key: 'editCust', label: 'Edit Customer', icon: <FaEdit /> },
-    { key: 'manageIt', label: 'Manage Books', icon: <FaBoxOpen /> },
-    { key: 'displayAcc', label: 'View Customer', icon: <FaEye /> },
-    { key: 'calcB', label: 'Calculate Bill', icon: <FaCalculator /> },
-    { key: 'viewBills', label: 'View Bills', icon: <FaFileInvoice /> },
-    { key: 'deleteCust', label: 'Delete Customer', icon: <FaTrash /> },
-    { key: 'browseBooks', label: 'Browse Books', icon: <FaBookOpen /> },
-    { key: 'helpS', label: 'Help', icon: <FaQuestionCircle /> },
-  ];
+  // Define menu items based on role
+  const menuItems = {
+    Cashier: [
+      { key: 'addCust', label: 'Add Customer', icon: <FaUserPlus /> },
+      { key: 'editCust', label: 'Edit Customer', icon: <FaEdit /> },
+      { key: 'displayAcc', label: 'View Customer', icon: <FaEye /> },
+      { key: 'calcB', label: 'Calculate Bill', icon: <FaCalculator /> },
+      { key: 'viewBills', label: 'View Bills', icon: <FaFileInvoice /> },
+      { key: 'browseBooks', label: 'Browse Books', icon: <FaBookOpen /> },
+      { key: 'helpS', label: 'Help', icon: <FaQuestionCircle /> },
+    ],
+    Admin: [
+      { key: 'addCust', label: 'Add Customer', icon: <FaUserPlus /> },
+      { key: 'editCust', label: 'Edit Customer', icon: <FaEdit /> },
+      { key: 'displayAcc', label: 'View Customer', icon: <FaEye /> },
+      { key: 'calcB', label: 'Calculate Bill', icon: <FaCalculator /> },
+      { key: 'viewBills', label: 'View Bills', icon: <FaFileInvoice /> },
+      { key: 'manageIt', label: 'Manage Books', icon: <FaBoxOpen /> },
+      { key: 'deleteCust', label: 'Delete Customer', icon: <FaTrash /> },
+      { key: 'browseBooks', label: 'Browse Books', icon: <FaBookOpen /> },
+      { key: 'helpS', label: 'Help', icon: <FaQuestionCircle /> },
+    ],
+  };
+
+  const visibleMenuItems = userRole ? menuItems[userRole] || menuItems['Cashier'] : [];
 
   return (
     <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-900'}`}>
-      
       {/* Sidebar */}
       <nav className={`w-64 p-6 space-y-6 shadow-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-r-2xl`}>
         <h2 className="text-2xl font-bold mb-8 flex items-center text-gradient-to-r from-blue-400 to-purple-500">
@@ -48,7 +60,7 @@ function Dashboard({ setLoggedIn, setError }) {
         </h2>
 
         <div className="space-y-2">
-          {menuItems.map(item => (
+          {visibleMenuItems.map(item => (
             <button
               key={item.key}
               onClick={() => setPart(item.key)}
@@ -82,11 +94,11 @@ function Dashboard({ setLoggedIn, setError }) {
         <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg transition">
           {part === 'addCust' && <AddCustomer />}
           {part === 'editCust' && <EditCustomer />}
-          {part === 'manageIt' && <ManageItems />}
+          {part === 'manageIt' && userRole === 'Admin' && <ManageItems />}
           {part === 'displayAcc' && <DisplayAccount />}
           {part === 'calcB' && <CalculateBill />}
           {part === 'viewBills' && <ViewBills />}
-          {part === 'deleteCust' && <DeleteCustomer />}
+          {part === 'deleteCust' && userRole === 'Admin' && <DeleteCustomer />}
           {part === 'browseBooks' && <BrowseBooks />}
           {part === 'helpS' && <HelpSection />}
         </div>

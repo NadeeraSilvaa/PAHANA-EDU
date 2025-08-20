@@ -5,49 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/GetAllItemsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/GetCustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SearchItemsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/AddCustomerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CalculateBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CalculateBillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DeleteCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DeleteCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ManageItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ManageItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ItemDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/BillDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/ItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dtos/ItemDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/CustomerMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ItemMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/BillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/TestDBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HelpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HelpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validators/CustomerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validators/CustomerValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validators/ItemValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validators/ItemValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/AddCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/DeleteCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/DeleteCustomer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/DisplayAccount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/EditCustomer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/HelpSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ManageItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/SearchItems.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -102,6 +80,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.TestDBConnection.executor": "Run",
+    "JUnit.AddCustomerControllerTest (1).executor": "Coverage",
+    "JUnit.AddCustomerControllerTest.executor": "Coverage",
+    "JUnit.LoginControllerTest.executor": "Coverage",
+    "JUnit.LoginControllerTest.testDoPostLoginFailure.executor": "Coverage",
+    "JUnit.LoginControllerTest.testDoPostLoginSuccess.executor": "Coverage",
+    "JUnit.LoginControllerTest.testDoPostVerifySuccess.executor": "Run",
+    "JUnit.LoginControllerTest.testVerifyToken.executor": "Coverage",
     "JUnit.TestDBConnectionTest.executor": "Coverage",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -109,6 +94,8 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Smart Tomcat.Dev.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "Dev",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nadee/OneDrive/Desktop/ICBT/Java Project/PAHANA-EDU/pahana-backend",
@@ -125,27 +112,27 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="test" />
+      <recent name="controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java" />
       <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java\" />
       <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java\models" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="test" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="controller" />
+    </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Dev">
-    <configuration name="TestDBConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestDBConnection" />
-      <module name="pahana-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDBConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddCustomerControllerTest">
+    <configuration name="AddCustomerControllerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pahana-backend" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +141,71 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.TestDBConnectionTest" />
+      <option name="MAIN_CLASS_NAME" value="test.AddCustomerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddCustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.AddCustomerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginControllerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest.testDoPostVerifySuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginControllerTest" />
+      <option name="METHOD_NAME" value="testDoPostVerifySuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginControllerTest.testVerifyToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginControllerTest" />
+      <option name="METHOD_NAME" value="testVerifyToken" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,14 +235,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TestDBConnection" />
-      <item itemvalue="JUnit.TestDBConnectionTest" />
+      <item itemvalue="JUnit.AddCustomerControllerTest" />
+      <item itemvalue="JUnit.AddCustomerControllerTest (1)" />
+      <item itemvalue="JUnit.LoginControllerTest" />
+      <item itemvalue="JUnit.LoginControllerTest.testDoPostVerifySuccess" />
+      <item itemvalue="JUnit.LoginControllerTest.testVerifyToken" />
       <item itemvalue="Smart Tomcat.Dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestDBConnectionTest" />
-        <item itemvalue="Application.TestDBConnection" />
+        <item itemvalue="JUnit.AddCustomerControllerTest" />
+        <item itemvalue="JUnit.AddCustomerControllerTest (1)" />
+        <item itemvalue="JUnit.LoginControllerTest" />
+        <item itemvalue="JUnit.LoginControllerTest.testVerifyToken" />
+        <item itemvalue="JUnit.LoginControllerTest.testDoPostVerifySuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +271,7 @@
       <workItem from="1755133606091" duration="5209000" />
       <workItem from="1755592645709" duration="521000" />
       <workItem from="1755593189144" duration="16261000" />
-      <workItem from="1755673276595" duration="19641000" />
+      <workItem from="1755673276595" duration="29028000" />
     </task>
     <servers />
   </component>
@@ -232,5 +288,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testDoPostLoginSuccess.ic" NAME="LoginControllerTest.testDoPostLoginSuccess Coverage Results" MODIFIED="1755710855829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testDoPostLoginFailure.ic" NAME="LoginControllerTest.testDoPostLoginFailure Coverage Results" MODIFIED="1755710869870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest.ic" NAME="AddCustomerControllerTest Coverage Results" MODIFIED="1755712187166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest__1_.ic" NAME="AddCustomerControllerTest (1) Coverage Results" MODIFIED="1755711898487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testVerifyToken.ic" NAME="LoginControllerTest.testVerifyToken Coverage Results" MODIFIED="1755711334148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest.ic" NAME="LoginControllerTest Coverage Results" MODIFIED="1755711505600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -4,6 +4,7 @@ public class User {
     private int userId;
     private String userName;
     private String userPass;
+    private String role;
 
     public int getUserId() {
         return userId;
@@ -27,5 +28,13 @@ public class User {
 
     public void setUserPass(String userPass) {
         this.userPass = userPass;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

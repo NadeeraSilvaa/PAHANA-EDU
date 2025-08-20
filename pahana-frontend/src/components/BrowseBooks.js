@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
 import { FaSearch } from 'react-icons/fa';
 
@@ -9,33 +9,65 @@ function BrowseBooks() {
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('');
 
-  // Fetch all books on component mount
   useEffect(() => {
-    fetch('http://localhost:8081/pahana-backend/getAllBooks')
-      .then(res => res.json())
-      .then(data => {
-        const booksArray = Array.isArray(data) ? data : [];
-        setBooks(booksArray);
-        setFilteredBooks(booksArray);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError('Failed to load books');
-        setLoading(false);
-      });
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
   }, []);
 
-  // Handle search
+  useEffect(() => {
+    if (userRole) {
+      fetch('http://localhost:8081/pahana-backend/getAllBooks', {
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+      })
+        .then(res => res.json())
+        .then(data => {
+          const booksArray = Array.isArray(data) ? data : [];
+          setBooks(booksArray);
+          setFilteredBooks(booksArray);
+          setLoading(false);
+        })
+        .catch(() => {
+          setError('Failed to load books');
+          setLoading(false);
+        });
+    }
+  }, [userRole]);
+
   const handleSearch = async () => {
+    if (!userRole || !['Admin', 'Cashier'].includes(userRole)) {
+      setError('Access denied: Insufficient permissions');
+      return;
+    }
     if (!searchTerm) {
-      setFilteredBooks(books); // Reset to all books if search term is empty
+      setFilteredBooks(books);
       setError('');
       return;
     }
 
     try {
-      const res = await fetch(`http://localhost:8081/pahana-backend/searchItems?name=${encodeURIComponent(searchTerm)}`);
+      const res = await fetch(`http://localhost:8081/pahana-backend/searchItems?name=${encodeURIComponent(searchTerm)}`, {
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+      });
       const data = await res.json();
       setFilteredBooks(Array.isArray(data) ? data : []);
       setError('');
@@ -45,13 +77,14 @@ function BrowseBooks() {
     }
   };
 
-  // Update filtered books when search term changes (optional: trigger search on Enter key)
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       handleSearch();
     }
   };
 
+  if (!userRole) return <p className="text-error text-center">Loading role...</p>;
+  if (!['Admin', 'Cashier'].includes(userRole)) return <p className="text-error text-center">Access denied</p>;
   if (loading) return <p className="text-center text-textLight dark:text-textDark">Loading books...</p>;
   if (error) return <p className="text-error text-center">{error}</p>;
 

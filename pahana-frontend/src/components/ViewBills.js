@@ -1,5 +1,4 @@
-// src/components/ViewBills.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTheme } from '../ThemeContext';
 
 function ViewBills() {
@@ -7,8 +6,36 @@ function ViewBills() {
   const [bills, setBills] = useState([]);
   const [custId, setCustId] = useState('');
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('');
+
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      fetch('http://localhost:8081/pahana-backend/login/verify?token=' + token)
+        .then(res => res.json())
+        .then(data => {
+          if (data.valid) {
+            setUserRole(data.role || 'Cashier');
+          } else {
+            setError('Unauthorized access');
+            setUserRole('');
+          }
+        })
+        .catch(() => {
+          setError('Failed to verify token');
+          setUserRole('');
+        });
+    } else {
+      setError('Please log in');
+      setUserRole('');
+    }
+  }, []);
 
   const fetchBills = async () => {
+    if (!userRole || !['Admin', 'Cashier'].includes(userRole)) {
+      setError('Access denied: Insufficient permissions');
+      return;
+    }
     if (!custId) {
       setError('Please enter customer ID');
       return;
@@ -16,13 +43,18 @@ function ViewBills() {
     setError('');
 
     try {
-      const res = await fetch(`http://localhost:8081/pahana-backend/viewBills?customerId=${custId}`);
+      const res = await fetch(`http://localhost:8081/pahana-backend/viewBills?customerId=${custId}`, {
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('authToken')}` }
+      });
       const data = await res.json();
       setBills(Array.isArray(data.bills) ? data.bills : Array.isArray(data) ? data : []);
     } catch (err) {
       setError('Fetch failed');
     }
   };
+
+  if (!userRole) return <p className="text-error text-center">Loading role...</p>;
+  if (!['Admin', 'Cashier'].includes(userRole)) return <p className="text-error text-center">Access denied</p>;
 
   return (
     <div className={`p-6 rounded-lg shadow-md ${darkMode ? 'bg-cardDark text-textDark' : 'bg-cardLight text-textLight'}`}>
