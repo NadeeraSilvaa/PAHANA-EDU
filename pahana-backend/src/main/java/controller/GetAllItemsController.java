@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class GetAllItemsController extends HttpServlet {
-    private ItemService service = new ItemService();
+    ItemService service = new ItemService();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");

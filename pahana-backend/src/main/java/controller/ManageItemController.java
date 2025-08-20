@@ -20,7 +20,7 @@ import java.nio.file.StandardCopyOption;
         maxFileSize = 1024 * 1024 * 5,      // 5MB
         maxRequestSize = 1024 * 1024 * 50)  // 50MB
 public class ManageItemController extends HttpServlet {
-    private ItemService service = new ItemService();
+    ItemService service = new ItemService();
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String act = req.getParameter("action");

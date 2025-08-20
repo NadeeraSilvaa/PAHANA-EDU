@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class SearchItemsController extends HttpServlet {
-    private ItemService service = new ItemService();
+    ItemService service = new ItemService();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");

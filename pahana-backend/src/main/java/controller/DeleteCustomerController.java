@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class DeleteCustomerController extends HttpServlet {
-    private CustomerService service = new CustomerService();
+    CustomerService service = new CustomerService();
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int accNum = Integer.parseInt(req.getParameter("accountNumber"));

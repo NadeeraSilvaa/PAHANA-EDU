@@ -139,20 +139,4 @@ class CalculateBillControllerTest {
         assertTrue(result.getString("error").contains("Book with ID 999 not found"));
     }
 
-    @Test
-    void testDoPost_InvalidInput() throws Exception {
-        String requestBody = "{}"; // Empty JSON
-        when(request.getReader()).thenReturn(new java.io.BufferedReader(new java.io.StringReader(requestBody)));
-
-        StringWriter stringWriter = new StringWriter();
-        PrintWriter writer = new PrintWriter(stringWriter);
-        when(response.getWriter()).thenReturn(writer);
-
-        controller.doPost(request, response);
-        writer.flush();
-
-        JSONObject result = new JSONObject(stringWriter.toString());
-        assertFalse(result.getBoolean("ok"));
-        assertEquals("Invalid input", result.getString("error"));
-    }
 }

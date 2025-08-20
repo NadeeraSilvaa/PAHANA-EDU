@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ViewBillsController extends HttpServlet {
-    private BillService service = new BillService();
+    BillService service = new BillService();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int custId = Integer.parseInt(req.getParameter("customerId"));

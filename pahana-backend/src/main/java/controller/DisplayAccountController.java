@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class DisplayAccountController extends HttpServlet {
-    private CustomerService service = new CustomerService();
+    CustomerService service = new CustomerService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

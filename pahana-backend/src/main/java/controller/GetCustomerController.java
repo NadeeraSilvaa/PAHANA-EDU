@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class GetCustomerController extends HttpServlet {
-    private CustomerService service = new CustomerService();
+    CustomerService service = new CustomerService();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/json");
