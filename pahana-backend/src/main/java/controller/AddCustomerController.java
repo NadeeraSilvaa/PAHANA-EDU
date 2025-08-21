@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.Map;
-
+//Customer Controller
 public class AddCustomerController extends HttpServlet {
     protected CustomerService service = new CustomerService();
 
