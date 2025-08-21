@@ -1,0 +1,73 @@
+.main-app {
+  font-family: Arial;
+  text-align: center;
+  background: #f0f0f0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box, .form-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.dash {
+  display: flex;
+}
+
+.side {
+  width: 200px;
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.side button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cont {
+  flex: 1;
+}
+
+.table-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table-details td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}

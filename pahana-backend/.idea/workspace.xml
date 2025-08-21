@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/HarryPotter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/WanderingTheEarth.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/codebreaker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/mystrylake.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/silentforest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/starlit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploads/uneviledtruth.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AddCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DisplayAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/EditCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EditCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BillDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/AddCustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/AddCustomerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/BrowseBooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/CalculateBill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pahana-frontend/src/components/ViewBills.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NadeeraSilvaa&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NadeeraSilvaa/PAHANA-EDU.git&quot;,
+    &quot;accountId&quot;: &quot;3bdd4595-6456-4285-975a-71b34fb98079&quot;
+  }
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="31FwT04P2vHDLYvhHfKGdg3UfMu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TestDBConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddCustomerControllerTest (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AddCustomerControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.BillDaoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CalculateBillControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.CustomerDaoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DatabaseConnectionTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DeleteCustomerControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.DisplayAccountControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.EditCustomerControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GetAllItemsControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GetCustomerControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.HelpControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ItemDaoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostLoginFailure.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostLoginSuccess.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.LoginControllerTest.testDoPostVerifySuccess.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoginControllerTest.testVerifyToken.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ManageItemControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SearchItemsControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.TestDBConnectionTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.UserDaoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ViewBillsControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.controller in pahana-backend.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.java in pahana-backend.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Dev.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Staging&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nadee/OneDrive/Desktop/ICBT/Java Project/PAHANA-EDU/pahana-backend/src/main/webapp/uploads&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="test" />
+      <recent name="controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\webapp\uploads" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java" />
+      <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java\" />
+      <recent name="C:\Users\nadee\OneDrive\Desktop\ICBT\Java Project\PAHANA-EDU\pahana-backend\src\main\java\models" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="test" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dao" />
+      <recent name="controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.Dev">
+    <configuration name="BillDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.BillDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.CustomerDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="controller in pahana-backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/controller" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in pahana-backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pahana-backend" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dev" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\Users\nadee\.SmartTomcat\pahana-backend\pahana-backend" />
+      <option name="contextPath" value="/pahana-backend" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="port" value="8081" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.43" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-10.1.43/apache-tomcat-10.1.43" />
+          <option name="version" value="10.1.43.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="pahana-backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.BillDaoTest" />
+      <item itemvalue="JUnit.CustomerDaoTest" />
+      <item itemvalue="JUnit.UserDaoTest" />
+      <item itemvalue="JUnit.controller in pahana-backend" />
+      <item itemvalue="JUnit.java in pahana-backend" />
+      <item itemvalue="Smart Tomcat.Dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.java in pahana-backend" />
+        <item itemvalue="JUnit.controller in pahana-backend" />
+        <item itemvalue="JUnit.BillDaoTest" />
+        <item itemvalue="JUnit.CustomerDaoTest" />
+        <item itemvalue="JUnit.UserDaoTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ec57629-34e5-4f68-bb17-9ca553934926" name="Changes" comment="" />
+      <created>1755133135153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755133135153</updated>
+      <workItem from="1755133136629" duration="422000" />
+      <workItem from="1755133606091" duration="5209000" />
+      <workItem from="1755592645709" duration="521000" />
+      <workItem from="1755593189144" duration="16261000" />
+      <workItem from="1755673276595" duration="29028000" />
+      <workItem from="1755701457668" duration="781000" />
+      <workItem from="1755703473091" duration="4302000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pahana_backend$DeleteCustomerControllerTest.ic" NAME="DeleteCustomerControllerTest Coverage Results" MODIFIED="1755715829163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$ManageItemControllerTest.ic" NAME="ManageItemControllerTest Coverage Results" MODIFIED="1755716655039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$UserDaoTest.ic" NAME="UserDaoTest Coverage Results" MODIFIED="1755718047572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testDoPostLoginSuccess.ic" NAME="LoginControllerTest.testDoPostLoginSuccess Coverage Results" MODIFIED="1755710855829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$EditCustomerControllerTest.ic" NAME="EditCustomerControllerTest Coverage Results" MODIFIED="1755716024862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest.ic" NAME="AddCustomerControllerTest Coverage Results" MODIFIED="1755715327572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$controller_in_pahana_backend.ic" NAME="controller in pahana-backend Coverage Results" MODIFIED="1755718271112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/pahana_backend$DisplayAccountControllerTest.ic" NAME="DisplayAccountControllerTest Coverage Results" MODIFIED="1755715941560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$AddCustomerControllerTest__1_.ic" NAME="AddCustomerControllerTest (1) Coverage Results" MODIFIED="1755711898487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$HelpControllerTest.ic" NAME="HelpControllerTest Coverage Results" MODIFIED="1755716392711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest.ic" NAME="LoginControllerTest Coverage Results" MODIFIED="1755716491331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$CalculateBillControllerTest.ic" NAME="CalculateBillControllerTest Coverage Results" MODIFIED="1755715734551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$GetAllItemsControllerTest.ic" NAME="GetAllItemsControllerTest Coverage Results" MODIFIED="1755716119574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$ViewBillsControllerTest.ic" NAME="ViewBillsControllerTest Coverage Results" MODIFIED="1755716934695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$CustomerDaoTest.ic" NAME="CustomerDaoTest Coverage Results" MODIFIED="1755718112145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$java_in_pahana_backend.ic" NAME="java in pahana-backend Coverage Results" MODIFIED="1755718304814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/pahana_backend$BillDaoTest.ic" NAME="BillDaoTest Coverage Results" MODIFIED="1755718225412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$DatabaseConnectionTest.ic" NAME="DatabaseConnectionTest Coverage Results" MODIFIED="1755717717711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testDoPostLoginFailure.ic" NAME="LoginControllerTest.testDoPostLoginFailure Coverage Results" MODIFIED="1755710869870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$SearchItemsControllerTest.ic" NAME="SearchItemsControllerTest Coverage Results" MODIFIED="1755716728761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$ItemDaoTest.ic" NAME="ItemDaoTest Coverage Results" MODIFIED="1755717822012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$LoginControllerTest_testVerifyToken.ic" NAME="LoginControllerTest.testVerifyToken Coverage Results" MODIFIED="1755711334148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/pahana_backend$GetCustomerControllerTest.ic" NAME="GetCustomerControllerTest Coverage Results" MODIFIED="1755716199322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>controller.*</FILTER>
+    </SUITE>
+  </component>
+</project>
